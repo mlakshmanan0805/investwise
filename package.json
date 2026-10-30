@@ -1,0 +1,32 @@
+{
+  "name": "investwise",
+  "version": "1.0.0",
+  "description": "InvestWise – Investment Risk and Return Analyzer (Academic Project)",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "start": "node server/src/server.js",
+    "dev:server": "node server/src/server.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "open": "npm run dev",
+    "run": "npm run dev",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "investment",
+    "risk-analysis",
+    "finance",
+    "portfolio",
+    "academic-project"
+  ],
+  "author": "InvestWise Team",
+  "license": "MIT"
+}
